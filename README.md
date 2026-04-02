@@ -1,4 +1,4 @@
-# react-address-picker
+# react-address-map-picker
 
 A highly customizable React address picker component with interactive Leaflet maps, Nominatim geocoding, autocomplete search, and optional i18next integration.
 
@@ -20,7 +20,7 @@ A highly customizable React address picker component with interactive Leaflet ma
 ## Installation
 
 ```bash
-npm install react-address-picker leaflet
+npm install react-address-map-picker leaflet
 ```
 
 ### Peer dependencies
@@ -49,7 +49,7 @@ Add the package to your Tailwind `content` paths so the utility classes are incl
 module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/react-address-picker/dist/**/*.js",
+    "./node_modules/react-address-map-picker/dist/**/*.js",
   ],
   // ...
 };
@@ -59,7 +59,7 @@ module.exports = {
 
 ```tsx
 import "leaflet/dist/leaflet.css";
-import { AddressPicker } from "react-address-picker";
+import { AddressPicker } from "react-address-map-picker";
 
 function MyForm() {
   return (
@@ -77,7 +77,7 @@ For full control over layout, use the compound components:
 
 ```tsx
 import "leaflet/dist/leaflet.css";
-import { AddressPicker } from "react-address-picker";
+import { AddressPicker } from "react-address-map-picker";
 
 function CustomLayout() {
   return (
@@ -200,7 +200,7 @@ The package ships with English and German translations. To use them with your i1
 ```tsx
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { registerTranslations } from "react-address-picker";
+import { registerTranslations } from "react-address-map-picker";
 
 i18n.use(initReactI18next).init({
   lng: "en",
@@ -215,7 +215,7 @@ Then pass the `t` function:
 
 ```tsx
 import { useTranslation } from "react-i18next";
-import { AddressPicker } from "react-address-picker";
+import { AddressPicker } from "react-address-map-picker";
 
 function MyComponent() {
   const { t } = useTranslation("addressPicker");

@@ -1,5 +1,5 @@
 {
-  "name": "react-address-picker",
+  "name": "react-address-map-picker",
   "version": "0.1.0",
   "description": "A highly customizable React address picker component with Leaflet maps, Nominatim geocoding, and i18next support",
   "type": "module",
@@ -85,6 +85,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tusharbodarya/react-address-picker"
+    "url": "https://github.com/bodaryatushar/react-address-map-picker"
   }
 }
