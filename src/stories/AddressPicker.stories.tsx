@@ -37,6 +37,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  name: "Default (Search + Map)",
   args: {
     defaultLocation: {
       lat: 49.796128,
@@ -46,28 +47,54 @@ export const Default: Story = {
   },
 };
 
-export const NewYork: Story = {
-  name: "New York City",
+export const FullFeatured: Story = {
+  name: "Full Featured (All Sections)",
+  args: {
+    defaultLocation: {
+      lat: 49.796128,
+      lng: 10.346403,
+      address: "Prichsenstadter Str. 9, 97353 Wiesentheid",
+    },
+    showCoordinates: true,
+    showMarkerNav: true,
+    showLocationDisplay: true,
+  },
+};
+
+export const WithCoordinates: Story = {
+  name: "With Coordinates",
   args: {
     defaultLocation: {
       lat: 40.7128,
       lng: -74.006,
       address: "New York, NY, USA",
     },
-    zoom: 12,
+    showCoordinates: true,
   },
 };
 
-export const Tokyo: Story = {
-  name: "Tokyo",
+export const WithLocationDisplay: Story = {
+  name: "With Location Display",
+  args: {
+    defaultLocation: {
+      lat: 51.5074,
+      lng: -0.1278,
+      address: "London, UK",
+    },
+    showLocationDisplay: true,
+  },
+};
+
+export const WithMarkerNav: Story = {
+  name: "With Marker Navigation",
   args: {
     defaultLocation: {
       lat: 35.6762,
       lng: 139.6503,
       address: "Tokyo, Japan",
     },
+    showMarkerNav: true,
     zoom: 11,
-    mapHeight: "500px",
   },
 };
 
@@ -80,22 +107,6 @@ export const MapOnly: Story = {
       address: "Paris, France",
     },
     showSearch: false,
-    showCoordinates: false,
-    showMarkerNav: false,
-    showLocationDisplay: false,
-  },
-};
-
-export const SearchAndMap: Story = {
-  name: "Search + Map",
-  args: {
-    defaultLocation: {
-      lat: 51.5074,
-      lng: -0.1278,
-      address: "London, UK",
-    },
-    showCoordinates: false,
-    showMarkerNav: false,
   },
 };
 
@@ -108,6 +119,7 @@ export const TallMap: Story = {
       address: "Sydney, Australia",
     },
     mapHeight: "600px",
+    showLocationDisplay: true,
   },
 };
 
@@ -120,6 +132,8 @@ export const Disabled: Story = {
       address: "Berlin, Germany",
     },
     disabled: true,
+    showCoordinates: true,
+    showLocationDisplay: true,
   },
 };
 
@@ -131,6 +145,9 @@ export const CustomLabels: Story = {
       lng: -3.7038,
       address: "Madrid, Spain",
     },
+    showCoordinates: true,
+    showMarkerNav: true,
+    showLocationDisplay: true,
     labels: {
       searchPlaceholder: "Buscar dirección...",
       searchButton: "Buscar",
@@ -160,6 +177,7 @@ export const CustomStyles: Story = {
       lng: -122.4194,
       address: "San Francisco, CA, USA",
     },
+    showLocationDisplay: true,
     className: "max-w-2xl mx-auto",
     classNames: {
       mapContainer: "rounded-xl shadow-lg border-2 border-blue-400",

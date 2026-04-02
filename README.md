@@ -127,9 +127,9 @@ All props below apply to both `<AddressPicker />` and `<AddressPicker.Root>`.
 | `markerIcon` | `L.Icon \| L.DivIcon \| L.IconOptions` | Leaflet default | Custom marker icon |
 | `tileLayer` | `{ url, options? }` | OpenStreetMap | Custom tile layer |
 | `showSearch` | `boolean` | `true` | Show/hide search section |
-| `showCoordinates` | `boolean` | `true` | Show/hide coordinate inputs |
-| `showMarkerNav` | `boolean` | `true` | Show/hide d-pad navigation |
-| `showLocationDisplay` | `boolean` | `true` | Show/hide location display card |
+| `showCoordinates` | `boolean` | `false` | Show/hide coordinate inputs |
+| `showMarkerNav` | `boolean` | `false` | Show/hide d-pad navigation |
+| `showLocationDisplay` | `boolean` | `false` | Show/hide location display card |
 | `showMyLocation` | `boolean` | `true` | Show/hide geolocation button |
 | `showMapControls` | `boolean` | `true` | Show/hide zoom/reset overlay on map |
 | `className` | `string` | — | Root container class |

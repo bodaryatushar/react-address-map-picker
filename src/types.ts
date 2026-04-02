@@ -144,12 +144,17 @@ export interface AddressPickerProps {
   /** Custom tile layer (e.g. Mapbox). Defaults to OpenStreetMap */
   tileLayer?: TileLayerConfig;
 
-  /** Toggle visibility of individual sections */
+  /** Show address search section. Default `true` */
   showSearch?: boolean;
+  /** Show latitude/longitude coordinate inputs. Default `false` */
   showCoordinates?: boolean;
+  /** Show d-pad marker navigation. Default `false` */
   showMarkerNav?: boolean;
+  /** Show selected location display card. Default `false` */
   showLocationDisplay?: boolean;
+  /** Show "Use my location" button. Default `true` */
   showMyLocation?: boolean;
+  /** Show zoom/reset controls on map. Default `true` */
   showMapControls?: boolean;
 
   /** Root container className */
